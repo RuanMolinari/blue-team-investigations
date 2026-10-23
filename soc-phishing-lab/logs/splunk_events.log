@@ -1,0 +1,9 @@
+index=email sourcetype=email:gateway action=delivered recipient="carlos.silva@empresa.com" sender="rh-beneficios@update-beneficios-rh.com" subject="Urgente: Atualizacao de Beneficios 2026" attachment_name="Atualizacao_Beneficios.zip" attachment_size=245890
+
+index=proxy sourcetype=squid:access user="carlos.silva" src_ip="192.168.1.105" http_method=GET url="http://update-beneficios-rh.com/download/Atualizacao_Beneficios.zip" bytes_out=245890 http_status=200 dest_ip="198.51.100.45"
+
+index=endpoint sourcetype=XmlWinEventLog:Microsoft-Windows-Sysmon/Operational EventCode=1 Computer="DESKTOP-CS105" User="EMPRESA\\carlos.silva" Image="C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" CommandLine="powershell.exe -nop -w hidden -enc JABzACA..." ParentImage="C:\\Users\\carlos.silva\\Downloads\\Atualizacao_Beneficios.exe"
+
+index=endpoint sourcetype=XmlWinEventLog:Microsoft-Windows-Sysmon/Operational EventCode=3 Computer="DESKTOP-CS105" Image="C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" DestinationIp="203.0.113.88" DestinationPort=443 Initiated=true Protocol=tcp
+
+index=security sourcetype=defender:alert alert_name="Suspicious PowerShell Execution from Download Folder" severity="High" host="DESKTOP-CS105" file_hash="4a5f8b2c9e1d3f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a" action="Blocked"
