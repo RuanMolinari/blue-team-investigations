@@ -1,0 +1,23 @@
+# ===================================================
+# INDICADORES DE COMPROMETIMENTO (IOCs)
+# Caso: Phishing com Anexo Malicioso
+# Data da Investigação: 2026-10-23
+# Nota: URLs e IPs estão em formato "Defanged" por segurança.
+# ===================================================
+
+[Domínio / URL Maliciosa]
+http[://]update-beneficios-rh[.]com/download/Atualizacao_Beneficios.zip
+update-beneficios-rh[.]com
+
+[Endereço IP de Comando e Controle (C2)]
+203[.]0[.]113[.]88:443
+
+[Hashes do Payload (Anexo/Executável)]
+SHA-256: 4a5f8b2c9e1d3f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a
+
+[Arquivos Envolvidos]
+Atualizacao_Beneficios.zip
+Atualizacao_Beneficios.exe
+
+[E-mail do Remetente Fraude]
+rh-beneficios[@]update-beneficios-rh[.]com
