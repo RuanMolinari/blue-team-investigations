@@ -1,0 +1,11 @@
+// Illustrative KQL. Adapt table/field names to the SIEM schema.
+// This is a triage query, not proof of impossible travel or compromise.
+SigninLogs
+| where TimeGenerated > ago(24h)
+| summarize FirstSeen=min(TimeGenerated), LastSeen=max(TimeGenerated),
+    Countries=make_set(LocationDetails.countryOrRegion),
+    IPs=make_set(IPAddress),
+    Apps=make_set(AppDisplayName)
+    by UserPrincipalName
+| where array_length(Countries) > 1 or array_length(IPs) > 3
+| order by LastSeen desc
