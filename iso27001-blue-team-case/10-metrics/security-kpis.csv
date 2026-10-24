@@ -1,0 +1,9 @@
+metric_id,metric_name,definition,illustrative_baseline,illustrative_target,source,frequency,caveat
+KPI-01,Cobertura de EDR,Endpoints elegíveis com EDR ativo dividido pelo total elegível,72% sintético,98%+,Inventário EDR,Mensal,Substituir por dado medido
+KPI-02,MFA resistente a phishing,Identidades privilegiadas com método resistente dividido pelo total elegível,Não medido,100%,IdP,Mensal,Objetivo ilustrativo
+KPI-03,Vulnerabilidades críticas vencidas,Findings críticos após SLA,37 sintético,0 ou aceito,Scanner+tickets,Semanal,Contagem sintética
+KPI-04,Cobertura de logging,Fontes obrigatórias saudáveis dividido pelo total,61% sintético,96%+,SIEM,Semanal,Definir critérios de saúde
+KPI-05,MTTD,Mediana entre primeiro evento observável e detecção,18 min cenário,Definir após baseline,SIEM+incidentes,Mensal,Não usar timeline inventada
+KPI-06,MTTR,Mediana entre declaração e contenção/recuperação,4h20 cenário,Definir após baseline,Incident management,Mensal,Definir endpoint da métrica
+KPI-07,Cliques em phishing simulado,Cliques divididos por mensagens entregues,17% cenário,Definir após baseline,Plataforma de conscientização,Por campanha,Usar simulação autorizada
+KPI-08,Sucesso de restore,Restores que atendem RPO/RTO divididos por testes planejados,Não medido,100% do plano,Backup/restore,Trimestral,Relatar falhas e correções

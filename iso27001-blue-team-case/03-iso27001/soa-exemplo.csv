@@ -1,0 +1,7 @@
+control_id,applicable,justification,status,evidence_reference,owner
+A.5.1,Sim,Governança de segurança é necessária,Planejado,Política e aprovação,GRC
+A.5.15,Sim,Controle de acesso é necessário,Planejado,Política IAM,IAM Lead
+A.8.15,Sim,Logging é necessário para detecção e investigação,Planejado,SIEM evidence,Blue Team
+A.8.16,Sim,Monitoramento é necessário para detectar eventos relevantes,Planejado,Monitoring report,Blue Team
+
+# Exemplo parcial e didático; não é uma SoA completa nem declaração de conformidade.

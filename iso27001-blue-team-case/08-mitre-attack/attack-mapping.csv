@@ -1,0 +1,7 @@
+scenario_step,technique_id,technique_name,mapping_status,required_evidence,notes
+Link de phishing por e-mail,T1566.002,Spearphishing Link,Presumido no tabletop,Cabeçalhos URL e registros de entrega/clique,Aplicável se o cenário incluir link malicioso direcionado
+Uso de identidade cloud comprometida,T1078.004,Valid Accounts: Cloud Accounts,Hipótese condicional,Logs de autenticação e evidência de abuso da conta,Credenciais válidas isoladamente não provam autoria
+Possível enumeração de contas,T1087.004,Account Discovery: Cloud Account,Investigar; não confirmado,Logs de auditoria/API,Não mapear apenas porque ocorreu login
+Atividade de PowerShell,T1059.001,Command and Scripting Interpreter: PowerShell,Investigar; não confirmado,Process creation/EDR,Mapear somente se execução for observada
+Possível exfiltração,Not assigned,Não confirmado,Não observado,Logs de acesso a dados e saída de rede,Não afirmar sem evidência
+Elevação de privilégio,Not assigned,Não confirmado,Não observado,Logs IAM/auditoria,Login privilegiado não prova elevação

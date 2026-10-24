@@ -1,0 +1,14 @@
+area,baseline_status,observed_or_assumed_gap,priority,evidence_needed
+Clause 4 — Context,Parcial,Cenário e partes interessadas ainda são premissas,Alta,Contexto aprovado e requisitos documentados
+Clause 5 — Leadership,Parcial,Responsabilidades e política ainda não aprovadas,Alta,Política e atas de aprovação
+Clause 6 — Planning,Parcial,Metodologia e riscos são didáticos,Crítica,Metodologia aprovada e risk register real
+Clause 7 — Support,Parcial,Competência e comunicação precisam de evidência,Alta,Treinamentos e registros
+Clause 8 — Operation,Parcial,Processos operacionais não executados,Alta,Procedimentos e amostras de operação
+Clause 9 — Performance evaluation,Inicial,Métricas e auditoria são simuladas,Alta,Indicadores medidos e auditoria interna
+Clause 10 — Improvement,Inicial,Lições e ações corretivas são de exercício,Alta,Registros de não conformidade e ações
+Annex A selection,Inicial,SoA precisa ser completada com base no risco e requisitos aplicáveis,Crítica,SoA aprovada e rastreável
+Identity and access,Parcial,Controles privilegiados e MFA resistente a phishing precisam de teste,Crítica,Configurações e amostras de autenticação
+Logging and detection,Parcial,Cobertura e regras precisam de validação em SIEM,Alta,Inventário de fontes e resultados de testes
+Vulnerability management,Parcial,SLAs e exceções ainda são premissas,Alta,Scanner,tickets e aprovações
+Backup and recovery,Parcial,Restauração ainda não demonstrada,Crítica,Restore tests e RPO/RTO
+Climate relevance,Inicial,Relevância de mudanças climáticas precisa ser determinada e registrada,Moderada,Análise de contexto e requisitos de partes interessadas
