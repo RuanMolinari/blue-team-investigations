@@ -1,0 +1,16 @@
+.env
+*.pem
+*.key
+*.p12
+*.pfx
+*.pcap
+*.evtx
+*.etl
+*.log
+private-evidence/
+local-lab/
+__pycache__/
+*.py[cod]
+.venv/
+.vscode/
+.idea/
