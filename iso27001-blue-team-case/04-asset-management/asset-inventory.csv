@@ -1,0 +1,11 @@
+asset_id,asset,owner,classification,criticality,location_or_service,security_notes
+AST-001,PostgreSQL production,Data Owner,Confidential,Critical,AWS,Customer data; least privilege and backup required
+AST-002,AWS production account,Cloud Lead,Confidential,Critical,AWS,IAM logging and privileged access controls
+AST-003,Customer API,Engineering Lead,Confidential,Critical,AWS,Authentication rate limiting and monitoring
+AST-004,GitHub organization,Engineering Lead,Confidential,High,GitHub,Branch protection and secret scanning
+AST-005,Microsoft 365 tenant,IT Lead,Confidential,Critical,Microsoft 365,Identity and audit logs
+AST-006,Managed Windows endpoints,Endpoint Lead,Internal,High,Corporate,EDR and logging
+AST-007,CI/CD pipeline,Engineering Lead,Confidential,Critical,Cloud/GitHub,Secrets and deploy controls
+AST-008,Backup repository,Infra Lead,Restricted,Critical,Cloud/backup,Isolation immutability and restore tests
+AST-009,SIEM workspace,Security Lead,Restricted,High,Cloud,Retention access control and source health
+AST-010,Support platform,Support Lead,Confidential,High,SaaS,Customer data and access review
