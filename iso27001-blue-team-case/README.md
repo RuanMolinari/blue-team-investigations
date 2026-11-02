@@ -1,73 +1,73 @@
-# ISO/IEC 27001:2022 + Blue Team — Estudo de Caso
+# ISO/IEC 27001:2022 + Blue Team — Case Study
 
-> **Projeto demonstrativo de portfólio.** A FinSecure Tecnologia Ltda., seus ativos, riscos, incidentes, prazos, métricas e resultados são inteiramente fictícios. Este repositório não comprova implementação em uma organização real, não é uma auditoria de conformidade e não representa certificação ISO/IEC 27001.
+> **Portfolio demonstration project.** FinSecure Tecnologia Ltda., including its assets, risks, incidents, timelines, metrics, and outcomes, is entirely fictional. This repository does not document an implementation at a real organization, a compliance audit, or an ISO/IEC 27001 certification.
 
-## Resumo executivo
+## Executive summary
 
-Este case demonstra como conectar requisitos de um Sistema de Gestão de Segurança da Informação (SGSI) a operações de Blue Team: governança, avaliação de riscos, seleção de controles, telemetria, detecção, resposta a incidentes, evidências, auditoria interna e melhoria contínua.
+This case study demonstrates how an Information Security Management System (ISMS) can be connected to Blue Team operations: governance, risk assessment, control selection, telemetry, detection, incident response, evidence management, internal audit, and continual improvement.
 
-O cenário é uma empresa SaaS fictícia de tecnologia financeira com AWS, Microsoft 365, Windows, GitHub, CI/CD e PostgreSQL. Um exercício de mesa simula phishing e possível comprometimento de identidade.
+The scenario describes a fictional financial-technology SaaS company using AWS, Microsoft 365, Windows, GitHub, CI/CD, and PostgreSQL. A tabletop exercise simulates phishing and possible identity compromise.
 
-## O que este projeto demonstra
+## What this project demonstrates
 
-- definição de contexto, escopo e objetivos do SGSI;
-- metodologia de riscos e registro inicial de riscos;
-- gap assessment e Statement of Applicability ilustrativos;
-- arquitetura de segurança, logging e monitoramento;
-- regras Sigma e consulta de triagem;
-- resposta a incidentes e análise de causa-raiz;
-- mapeamento MITRE ATT&CK condicionado à evidência;
-- auditoria interna simulada e métricas;
-- separação explícita entre premissas, hipóteses, dados sintéticos e evidências reais.
+- Definition of ISMS context, scope, and objectives.
+- Risk-assessment methodology and an initial risk register.
+- Illustrative gap assessment and Statement of Applicability (SoA).
+- Security architecture, logging, and monitoring.
+- Sigma rules and investigation queries.
+- Incident response and root-cause analysis.
+- MITRE ATT&CK mapping based on available evidence.
+- Simulated internal audit and security metrics.
+- Clear separation of assumptions, hypotheses, synthetic data, and actual evidence.
 
-## Organização fictícia
+## Fictional organization
 
-| Atributo | Premissa |
+| Attribute | Scenario assumption |
 |---|---|
-| Organização | FinSecure Tecnologia Ltda. |
-| Setor | SaaS / serviços financeiros B2B |
-| Porte | 180 pessoas |
-| Infraestrutura | AWS, Microsoft 365, Windows, GitHub, CI/CD, PostgreSQL |
-| Equipe de segurança | 3 pessoas |
-| Objetivo | Estruturar SGSI e capacidade de prevenção, detecção e resposta |
+| Organization | FinSecure Tecnologia Ltda. |
+| Industry | B2B SaaS / financial services |
+| Size | 180 employees |
+| Infrastructure | AWS, Microsoft 365, Windows, GitHub, CI/CD, PostgreSQL |
+| Security team | 3 people |
+| Objective | Establish an ISMS and prevention, detection, and response capabilities |
 
-## Estrutura
+## Repository structure
 
 ```text
-01-governance/          contexto, escopo, política e objetivos
-02-risk-management/     riscos, metodologia e tratamento
-03-iso27001/            gap assessment, SoA e mapeamento
-04-asset-management/    inventário sintético
-05-blue-team/           arquitetura, logging e vulnerability management
-06-detection/           Sigma, queries e validação
-07-incident-response/   tabletop, playbook e RCA
-08-mitre-attack/        mapeamento com confiança/evidência
-09-audit/               auditoria interna
-10-metrics/             KPIs e metodologia
-11-evidence/            índice de evidências
-12-lab/                 laboratório seguro
+01-governance/          context, scope, policy, and objectives
+02-risk-management/     risks, methodology, and treatment
+03-iso27001/            gap assessment, SoA, and control mapping
+04-asset-management/    synthetic asset inventory
+05-blue-team/           architecture, logging, and vulnerability management
+06-detection/            Sigma rules, queries, and validation
+07-incident-response/   tabletop, playbook, and root-cause analysis
+08-mitre-attack/        evidence-based mapping and confidence
+09-audit/               internal audit
+10-metrics/             KPIs and methodology
+11-evidence/            evidence index
+12-lab/                 controlled lab exercises
 ```
 
-## Precisão ISO/IEC 27001
+## ISO/IEC 27001 considerations
 
-A ISO/IEC 27001 especifica requisitos para um SGSI; controles devem ser determinados com base no contexto, riscos e obrigações aplicáveis. O Annex A não deve ser tratado como checklist automático.
+ISO/IEC 27001 specifies requirements for an ISMS. Controls should be determined according to the organization's context, risks, and applicable obligations; Annex A should not be treated as an automatic checklist.
 
-Este case considera a Emenda 1:2024 e registra a análise da relevância de mudanças climáticas no contexto do SGSI. O repositório não reproduz o texto integral de normas protegidas por direitos autorais.
+This case study considers Amendment 1:2024 and records an assessment of whether climate change is a relevant issue in the context of the ISMS. The repository does not reproduce the full text of copyrighted standards.
 
-## Incidente simulado
+## Simulated incident
 
-**INC-2026-001 — possível comprometimento de identidade por phishing.** O cenário começa com um link de login falso e credenciais fornecidas pelo usuário. A equipe simula contenção, revogação de sessões, revisão de OAuth, investigação de logs e recuperação.
+**INC-2026-001 — possible identity compromise through phishing.** The scenario begins with a fake login link and credentials submitted by a user. The response exercise covers containment, session revocation, OAuth review, log investigation, and recovery.
 
-Exfiltração, malware, persistência e elevação de privilégio **não são presumidos**. Só devem ser classificados como confirmados quando houver evidência suficiente.
+Data exfiltration, malware, persistence, and privilege escalation are **not assumed**. They should only be classified as confirmed when sufficient evidence is available.
 
-## Validação
+## Validation
 
 ```bash
 python scripts/validate_repo.py
 ```
 
-As regras Sigma e consultas devem ser validadas no SIEM/backend e no laboratório autorizado. Métricas sintéticas não devem ser apresentadas como resultados reais.
+Sigma rules and queries should be validated in the relevant SIEM/backend and authorized lab environment. Synthetic metrics must not be presented as real-world results.
 
 ## Disclaimer
 
-Todos os nomes, incidentes, ativos, métricas, prazos e resultados são fictícios. Este projeto é um estudo de caso educacional e de portfólio; não representa certificação, auditoria real ou implementação em produção.
+All organization names, incidents, assets, metrics, timelines, and outcomes are fictional. This is an educational portfolio case study; it is not a certification, real audit, or production implementation.
